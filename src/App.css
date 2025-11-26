@@ -1,0 +1,366 @@
+body {
+  background-color: #06040C !important;
+  font-family: SuisseIntl-Light;
+}
+
+body[data-scroll-locked="1"] {
+  margin: 0px !important;
+}
+
+body[data-scroll-locked] {
+  margin: 0px !important;
+}
+
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-padding-top: 200px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: SuisseIntl-Medium;
+}
+
+.sidebar::before {
+  content: '';
+  position: absolute;
+  background: url('./assets/Home/noise.svg');
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.home-main {
+  background: url("./assets/Home/noise.svg") center center / cover no-repeat;
+}
+
+.special-btn {
+  border-radius: 9999px;
+  color: var(--primary-foreground);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(275.19deg, #14E893 -15.5%, #5131AD 98.25%);
+}
+
+.gradient-box-shadow {
+  box-shadow:
+    10px 0px 30px 0px rgba(40, 173, 155, 0.5),
+    -20px 0px 40px 0px rgba(78, 58, 172, 0.5) !important;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+@media (max-width: 768px) {
+  .mobileGlass {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    backdrop-filter: blur(10px) saturate(150%);
+    -webkit-backdrop-filter: blur(10px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+}
+
+.landing-main::before {
+  content: '';
+  position: absolute;
+  background-image: url('./assets/Home/sidebox.png');
+  width: 1400px;
+  height: 400px;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 640px) {
+  .landing-main::before {
+    display: hidden;
+  }
+}
+
+.green-shadow {
+  content: '';
+  position: absolute;
+  background: linear-gradient(275.19deg, #14E893 -15.5%, #5131AD 98.25%);
+  border-radius: 50%;
+  width: 600px;
+  height: 450px;
+  z-index: -1;
+  opacity: 0.6;
+  filter: blur(100px) saturate(50%);
+  z-index: -90;
+}
+
+.purple-shadow {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(275.19deg, #14E893 -15.5%, #5131AD 98.25%);
+  z-index: -1;
+  opacity: 1;
+  filter: blur(300px) saturate(50%);
+  z-index: -90;
+}
+
+@media (max-width: 640px) {
+  .purple-shadow {
+    filter: blur(120px) saturate(65%);
+  }
+}
+
+.green-circled {
+  background: linear-gradient(274.57deg, #0C744A 1.89%, #14E893 98.19%);
+  border-radius: 50%;
+  opacity: 0.2;
+  z-index: -2;
+}
+
+.purple-circled {
+  background: linear-gradient(90deg, #211447 0%, #5131AD 100%);
+  width: 600px;
+  height: 400px;
+  border-radius: 50%;
+  opacity: 0.4;
+  filter: blur(80px);
+  z-index: -2;
+}
+
+/* AI Strategies */
+.ai-strategies-main::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border-radius: 45px;
+  padding: 14px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  -webkit-backdrop-filter: blur(8px) saturate(140%);
+  backdrop-filter: blur(8px) saturate(240%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (max-width: 640px) {
+  .ai-strategies-main::before {
+    inset: -11px;
+    padding: 11px;
+  }
+}
+
+.ai-strategy-shade-purple {
+  content: '';
+  position: absolute;
+  background: linear-gradient(90deg, #211447 0%, #5131AD 100%);
+  border-radius: 50%;
+  width: 700px;
+  height: 550px;
+  z-index: -1;
+  opacity: 0.8;
+  filter: blur(150px);
+  z-index: -90;
+}
+
+.ai-strategy-shade-green {
+  content: '';
+  position: absolute;
+  background: linear-gradient(274.57deg, #0C744A 1.89%, #14E893 98.19%);
+  border-radius: 50%;
+  width: 700px;
+  height: 500px;
+  z-index: -1;
+  opacity: 0.4;
+  filter: blur(150px);
+  z-index: -90;
+}
+
+/* Footer */
+.Footer li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* for IE and Edge */
+  scrollbar-width: none;
+  /* for Firefox */
+}
+
+.aiGif::before {
+  content: '';
+  position: absolute;
+  background: url("./assets/Home/aiStrategiesGIT.gif") center center / cover no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+#tv-attr-logo {
+  display: none;
+}
+
+
+.filter-green {
+  filter: brightness(0) saturate(100%) invert(73%) sepia(98%) saturate(415%) hue-rotate(100deg) brightness(95%) contrast(95%);
+}
+
+.filter-gray-400 {
+  filter: brightness(0) saturate(100%) invert(57%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(94%) contrast(84%);
+}
+
+.filter-gray-400:hover {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+/* Add this to your global CSS or use a CSS-in-JS solution */
+[contenteditable=true][data-placeholder]:empty:before {
+  content: attr(data-placeholder);
+  color: #6b7280;
+  /* gray-500 */
+  pointer-events: none;
+}
+
+
+
+/* MARK DOWN FORMATTER */
+
+/* Optional: Additional markdown styling for FinancialGPT */
+
+.markdown-content {
+  /* Base text styling */
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+/* Code blocks with syntax highlighting placeholder */
+.markdown-content pre {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 0.75rem 0;
+}
+
+.markdown-content pre code {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Tables styling */
+.markdown-content table {
+  font-size: 0.875rem;
+}
+
+/* Nested lists */
+.markdown-content ul ul,
+.markdown-content ol ol,
+.markdown-content ul ol,
+.markdown-content ol ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Smooth scrolling for code blocks */
+.markdown-content pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+.markdown-content pre::-webkit-scrollbar-track {
+  background: rgba(100, 116, 139, 0.1);
+  border-radius: 4px;
+}
+
+.markdown-content pre::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.3);
+  border-radius: 4px;
+}
+
+.markdown-content pre::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.5);
+}
+
+/* Image styling */
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+/* Task lists (GitHub-style checkboxes) */
+.markdown-content input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+
+/* Add to your global CSS */
+
+/* Content visibility for sections */
+.lazy-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
+/* Optimize images */
+img {
+  content-visibility: auto;
+}
+
+/* Smooth skeleton animation */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-pulse {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0.05) 100%);
+  background-size: 1000px 100%;
+}
+
+
+.border-\[\#0a0a0a\] {
+  border-color: transparent !important;
+}
